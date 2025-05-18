@@ -55,37 +55,6 @@ A utility class for drawing trend lines on MetaTrader charts, useful for visuali
    #include <AryaPlatform/TGline.mqh>
    ```
 
-## 🛠 Usage Example
-
-Here’s a simple example of how to use the `Trades` class:
-
-```mq5
-#include <AryaPlatform/Trades.mqh>
-
-CTradeManager trade;
-
-void OnTick()
-{
-    if (trade.Buy(0.1))
-        Print("Buy order executed!");
-    else
-        Print("Buy failed: ", trade.LastError());
-}
-```
-
-And an example using `TGline` to draw a trendline:
-
-```mq5
-#include <AryaPlatform/TGline.mqh>
-
-void OnInit()
-{
-    TGline trend("MyTrend", 0, 100, iTime(_Symbol, PERIOD_H1, 10), iClose(_Symbol, PERIOD_H1, 10),
-                                  iTime(_Symbol, PERIOD_H1, 5), iClose(_Symbol, PERIOD_H1, 5));
-    trend.SetColor(clRed);
-}
-```
-
 ## 📖 Documentation
 
 Full documentation will be available in the [Wiki section](https://github.com/yourusername/AryaPlatform/wiki) soon. It will include:
